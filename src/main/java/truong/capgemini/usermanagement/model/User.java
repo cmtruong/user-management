@@ -1,8 +1,18 @@
 package truong.capgemini.usermanagement.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class User implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private long id;
 	private String name, email;
@@ -23,6 +33,8 @@ public class User {
 		this.phone = phone;
 	}
 
+	@Id
+	@Column(name = "id", length = 10, nullable = false)
 	public long getId() {
 		return id;
 	}
@@ -31,6 +43,7 @@ public class User {
 		this.id = id;
 	}
 
+	@Column(name = "name", length = 20, nullable = false)
 	public String getName() {
 		return name;
 	}
@@ -39,6 +52,7 @@ public class User {
 		this.name = name;
 	}
 
+	@Column(name = "email", length = 50, nullable = false, unique = true)
 	public String getEmail() {
 		return email;
 	}
@@ -47,6 +61,7 @@ public class User {
 		this.email = email;
 	}
 
+	@Column(name = "dateOfBirth")
 	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
@@ -55,6 +70,7 @@ public class User {
 		this.dateOfBirth = dateOfBirth;
 	}
 
+	@Column(name = "age")
 	public int getAge() {
 		return age;
 	}
@@ -63,6 +79,7 @@ public class User {
 		this.age = age;
 	}
 
+	@Column(name = "phone", length = 10)
 	public String getPhone() {
 		return phone;
 	}
