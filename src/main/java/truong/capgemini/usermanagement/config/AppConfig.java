@@ -36,7 +36,6 @@ public class AppConfig {
 	@Bean
 	public ResourceBundleMessageSource bundleMessageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-		messageSource.setBasename("validator");;
 		return messageSource;
 	}
 

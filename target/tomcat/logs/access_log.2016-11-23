@@ -8,3 +8,4 @@
 0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:44:01 +0100] "GET /springuser/user/Daniel HTTP/1.1" 200 110 http-bio-8080-exec-3 7
 0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:47:20 +0100] "GET /springuser/user/Daniel HTTP/1.1" 200 110 http-bio-8080-exec-5 6
 0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:47:26 +0100] "GET /springuser/users HTTP/1.1" 200 618 http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:17:08:40 +0100] "GET /springuser/demo HTTP/1.1" 200 5 http-bio-8080-exec-1 185

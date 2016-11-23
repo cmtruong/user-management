@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import truong.capgemini.usermanagement.dao.UserDao;
-import truong.capgemini.usermanagement.validator.UserValidator;
 
 @RestController
 @Transactional
@@ -15,9 +14,6 @@ public class UserController {
 
 	@Autowired
 	private UserDao userDao;
-
-	@Autowired
-	private UserValidator validator;
 
 	@RequestMapping(value = "/demo")
 	public @ResponseBody String hello() {
