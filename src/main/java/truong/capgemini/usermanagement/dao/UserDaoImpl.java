@@ -32,7 +32,28 @@ public class UserDaoImpl implements UserDao {
 
 	public void saveUser(UserEntity entity) {
 		// TODO Auto-generated method stub
+		Long id = entity.getId();
+		User user = null;
+		if (id != null) {
+			user = this.findUser(id);
+		}
 
+		boolean isNew = false;
+		if (user == null) {
+			isNew = true;
+			user = new User();
+			user.setId(getAllUsers().size() + 1);
+		}
+		user.setName(entity.getName());
+		user.setEmail(entity.getEmail());
+		user.setAge(entity.getAge());
+		user.setDateOfBirth(entity.getDateOfBirth());
+		user.setPhone(entity.getPhone());
+
+		if (isNew) {
+			Session session = this.factory.getCurrentSession();
+			session.persist(user);
+		}
 	}
 
 	public UserEntity findUserEntity(long id) {
@@ -47,7 +68,10 @@ public class UserDaoImpl implements UserDao {
 
 	public void deleteUser(long id) {
 		// TODO Auto-generated method stub
-
+		User user = this.findUser(id);
+		if (user != null) {
+			this.factory.getCurrentSession().delete(user);
+		}
 	}
 
 }
