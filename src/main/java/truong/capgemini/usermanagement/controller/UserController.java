@@ -47,12 +47,20 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "user/delete/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody String delete(@PathVariable("id") Long id){
+	public @ResponseBody String deleteUser(@PathVariable("id") Long id){
 		if (userDao.delete(id) == null) {
 			return "Not exist this user in the list";
 		}
 		return "User " + id + " has been removed";
 	}
 	
+	@RequestMapping(value = "user/update/{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody String updateUser(@PathVariable("id") Long id, User user){
+		User u = userDao.update(id, user);
+		if (u == null) {
+			return "Not exist this user in the list";
+		}
+		return "User " + u.getName() + " has been updated";
+	}
 	
 }
