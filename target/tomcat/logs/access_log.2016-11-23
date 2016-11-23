@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:25:32 +0100] "GET /springuser/demo HTTP/1.1" 200 5 http-bio-8080-exec-1 78
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:25:32 +0100] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:30:15 +0100] "GET /springuser/demo HTTP/1.1" 200 5 http-bio-8080-exec-1 99
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:30:21 +0100] "GET /springuser/users HTTP/1.1" 200 12 http-bio-8080-exec-4 66
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:37:44 +0100] "GET /springuser/users HTTP/1.1" 200 618 http-bio-8080-exec-1 187
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:43:43 +0100] "GET /springuser/users HTTP/1.1" 200 618 http-bio-8080-exec-1 119
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:43:51 +0100] "GET /springuser/user/Vivian HTTP/1.1" 200 110 http-bio-8080-exec-2 47
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:44:01 +0100] "GET /springuser/user/Daniel HTTP/1.1" 200 110 http-bio-8080-exec-3 7
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:47:20 +0100] "GET /springuser/user/Daniel HTTP/1.1" 200 110 http-bio-8080-exec-5 6
+0:0:0:0:0:0:0:1 - - [23/Nov/2016:10:47:26 +0100] "GET /springuser/users HTTP/1.1" 200 618 http-bio-8080-exec-7 2
