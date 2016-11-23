@@ -46,5 +46,13 @@ public class UserController {
 		return u;
 	}
 	
+	@RequestMapping(value = "user/delete/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody String delete(@PathVariable("id") Long id){
+		if (userDao.delete(id) == null) {
+			return "Not exist this user in the list";
+		}
+		return "User " + id + " has been removed";
+	}
+	
 	
 }
