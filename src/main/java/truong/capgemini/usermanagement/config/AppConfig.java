@@ -20,6 +20,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import truong.capgemini.usermanagement.dao.UserDao;
+import truong.capgemini.usermanagement.dao.UserDaoImpl;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan("truong.capgemini.usermanagement")
@@ -92,11 +95,17 @@ public class AppConfig {
 	 * @param factory
 	 * @return
 	 */
+	
+	@Autowired
 	@Bean(name = "transactionManager")
 	public HibernateTransactionManager getTransactionManager(SessionFactory factory){
 		HibernateTransactionManager manager = new HibernateTransactionManager(factory);
 		return manager;
 	}
 	
+	@Bean(name = "userDao")
+	public UserDao getUserDao(){
+		return new UserDaoImpl();
+	}
 	
 }
